@@ -8,5 +8,6 @@ This repository contains two projects:
      
 # how to use:
  <li> Clone the repo to your local computer
+<li> Change the ApiKey in program.cs in UseCase project
    <li> Set the UseCase project as the startup project
      <li> Play with it as you want
