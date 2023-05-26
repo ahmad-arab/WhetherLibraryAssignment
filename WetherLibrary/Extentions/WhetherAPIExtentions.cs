@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http;
+using System.Text.Json;
 
 namespace WetherLibrary
 {
@@ -17,7 +19,9 @@ namespace WetherLibrary
 				throw new ArgumentNullException(nameof(optionsAction));
 			}
 			serviceCollection.Configure(optionsAction);
-			return serviceCollection.AddSingleton<IGetCurrentWeather, GetCurrentWeather>();
+			serviceCollection.AddSingleton<IGetCurrentWeather, GetCurrentWeather>();
+			serviceCollection.AddHttpClient<IGetCurrentWeather, GetCurrentWeather>();
+			return serviceCollection;
 		}
 	}
 }

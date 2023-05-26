@@ -2,6 +2,6 @@
 {
 	public interface IGetCurrentWeather
 	{
-		decimal GetCurrentTempreture(string cityName, bool isCelsius = true);
+		Task<double> GetCurrentTempreture(string cityName, TemperatureUnit unit = TemperatureUnit.Celsius);
 	}
 }
