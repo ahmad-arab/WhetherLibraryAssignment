@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddWeatherAPI(options =>
 {
-	options.ApiKey = "b9aea41858084ac5b78215756232505";
+	options.ApiKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 });
 
 var app = builder.Build();
